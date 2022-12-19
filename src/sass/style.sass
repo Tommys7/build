@@ -1,0 +1,50 @@
+@import "vars"
+
+
+body
+    font-family: sans-serif
+
+.container
+    max-width: 1170px
+    width: 96%
+    margin: auto
+
+button
+    background-color: $buttons
+    color:$accent
+    border: none
+
+img
+    max-width : 100%
+
+.header
+    padding: 20px 0px
+    &-block
+        display: flex
+        justify-content: space-between
+    &__info
+       display: flex
+    &__contacts
+        display: flex
+        flex-direction: column
+        text-align: right
+        margin-right: 30px
+        justify-content: center
+        @media (max-width:640px)
+            display: none
+    &__adress
+        margin-bottom: 7px
+        justify-content: center
+        font-size: 13px
+        font-weight: 400
+    &__phone
+        font-size: 20px
+        font-weight: 400
+        text-decoration: none
+        color: $accent
+    &__button
+        padding: 19px 48px
+        border-radius: 10px
+        background-color: #ffd200
+        
+        
