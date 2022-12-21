@@ -1,8 +1,10 @@
 @import "vars"
 
 
+
 body
     font-family: sans-serif
+    
 
 .container
     max-width: 1170px
@@ -14,7 +16,7 @@ button
     color:$accent
     border: none
 
-img
+.img
     max-width : 100%
 
 .header
@@ -48,3 +50,70 @@ img
         background-color: #ffd200
         
         
+.main
+    background-color: $grey
+    &-block
+        display: flex
+        padding: 30px 0px
+        @media (max-width: 1200px)
+            flex-direction: column
+
+    &-text
+        flex-basis: 50%
+        @media (max-width: 1200px)
+            margin-bottom: 30px
+        &__title
+            font-size: 41px
+            font-weight: 400
+            line-height: 55px
+            color: $accent
+            padding-right: 200px
+            margin-top: 50px
+            margin-bottom: 40px
+            @media (max-width: 1200px)
+                padding-right: 10px
+            @media (max-width: 640px)
+                font-size: 30
+                line-height: 1,4
+        &__subtitle
+            font-size: 20px
+            font-weight: 400
+            color: $accent
+            @media (max-width: 640px)
+                font-size: 16
+                line-height: 1,4
+    &-image
+        margin-right: -40px
+        @media (max-width: 1200px)
+            width: 100%
+    &-image img
+        @media (max-width: 680px)
+            width: 100%
+
+            
+    &-list
+        margin: 40px 0 0 0
+        padding: 0 0 0 0
+        @media (max-width: 640px)
+            margin: 30px 0 0 0
+        &__item
+            display: flex
+            align-items: center
+            margin-bottom: 30px
+        &__image
+            width: 40px
+            height: 40px
+            border: 2px solid #ffd200
+            border-radius: 50px
+            display: flex
+            justify-content: center
+            align-items: center
+            margin-right: 30px
+        &__text
+            line-height: 24px
+            font-size: 14px
+            color: $accent
+            max-width: 270px
+            @media (max-width: 640px)
+                font-size: 14px
+                max-width: 250px
