@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <script src="jquery-3.6.3.min.js"></script>
     <header class="header">
         <div class="container">
             <div class="header-block">
@@ -20,7 +21,7 @@
                         <span class="header__adress">Praha</span>
                         <a href="tel:+420777167699" class="header__phone">+420 777 167 699</a>
                     </div>
-                    <button class="button header__button">
+                    <button class="button header__button" id="button">
                         Zavolejte mi
                     </button>
                 </div>
@@ -62,41 +63,49 @@
                 </div>
             </div>
         </section>
-    </main>
-    <section class="offer">
-        <div class="container">
-            <div class="offer-block">
-                <h2 class="offer-title">
-                    Bezplatně vypracujeme design-projekt pro Váš domov a realizujeme ho!
-                </h2>
-                <span class="offer-subtitle">
-                    Zanechte poptávku pro vypracování bezplatného design-projektu!
-                </span>
-                <form action="" class="form offer__form">
-                    <input type="text" class="input offer__input" placeholder="Vase jmeno">
-                    <input type="tel" class="input offer__input" placeholder="Vas telefon">
-                    <button class="button offer__button">
-                        Získejte bezplatný design-projekt
-                    </button>
-                </form>
-                <div class="offer-footer">
-                    <div class="offer-manager__text">
-                        <span>
-                            Náš manažer vám zavolá v průběhu 60 sekund
-                        </span>
+
+        <section class="offer">
+            <div class="container">
+                <div class="offer-block">
+                    <h2 class="offer-title">
+                        Bezplatně vypracujeme design-projekt pro Váš domov a realizujeme ho!
+                    </h2>
+                    <span class="offer-subtitle">
+                        Zanechte poptávku pro vypracování bezplatného design-projektu!
+                    </span>
+                    <form action="" class="form offer__form">
+                        <input type="text" class="input offer__input" placeholder="Vase jmeno">
+                        <input type="tel" class="input offer__input" placeholder="Vas telefon">
+                        <button class="button offer__button">
+                            Získejte bezplatný design-projekt
+                        </button>
+                    </form>
+                    <div class="offer-footer">
+                        <div class="offer-manager__text">
+                            <span>
+                                Náš manažer vám zavolá v průběhu 60 sekund
+                            </span>
+                        </div>
+                        <div class="offer-callus__text">
+                            <p>
+                                nebo nám zavolejte sami <br>
+                                
+                            </p>
+                            <p class="offer-number">
+                                <a href="tel:+420 777 167 699">+420 777 167 699</a>
+                            </p>
+                        </div>      
                     </div>
-                    <div class="offer-callus__text">
-                        <p>
-                            nebo nám zavolejte sami <br>
-                            
-                        </p>
-                        <p class="offer-number">
-                            <a href="tel:+420 777 167 699">+420 777 167 699</a>
-                        </p>
-                    </div>      
                 </div>
             </div>
+        </section>
+    </main>
+    <div class="modal" id="modal">
+        <div class="modal-dialog">
+            <button class="modal-dialog__close" id="close">&times;</button>
+            <h4 class="modal-dialog__title">Modální okno</h4>
         </div>
-    </section>
+    </div>
+    <script src="js/main.js"></script>
 </body>
 </html>
