@@ -24,4 +24,25 @@ $(document).ready(function(){
     close.on('click', function(){
         modal.removeClass('modal_active');
     });
+
+    $('.portfolio__slider').slick({
+        slidesToShow : 3,
+        prevArrow: $('.arrows__left'),
+        nextArrow: $('.arrows__right'),
+
+        responsive: [
+            {
+              breakpoint: 1200,
+              settings: {
+                slidesToShow: 2,
+              }
+            },
+            {
+                breakpoint: 800,
+                settings: {
+                  slidesToShow: 1,
+                }
+              }     
+          ]
+    });
 });

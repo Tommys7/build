@@ -12,7 +12,7 @@ body
     width: 96%
     margin: auto
 
-button
+.button-style
     background-color: $buttons
     color:$accent
     border: none
@@ -25,6 +25,13 @@ input
     border: 1px solid $border-input
     border-radius: 10px
     padding: 25px
+
+.section-title
+    font-size: 30px
+    +bold
+    line-height: 45px
+    
+
 
 .img
     max-width : 100%
@@ -140,9 +147,12 @@ input
 
 
 .offer
-    padding: 90px 0px
+    padding: 78px 0px
     background: url(../img/offer-bgc.jpg) no-repeat
     background-position: center right
+    
+
+    
     position: relative
     @media (max-width: 1070px)
         background-size: cover
@@ -216,6 +226,40 @@ input
         text-decoration: none
         color:$accent
         +bold
+
+
+.portfolio
+    padding-top: 100px
+    padding-bottom: 100px
+    background: $grey url('../img/portfoliobg.png') left repeat-y
+    background-size: 50%
+
+    &__header
+        text-align: center
+        margin-bottom: 100px
+        color: $accent
+
+    &__arrows
+        max-width: 120px
+        display: flex
+        justify-content: space-between
+        margin: auto
+        margin-top: 70px
+
+.slider
+    &__image
+        margin: auto
+        
+
+.arrows__left, .arrows__right
+    cursor: pointer
+
+
+
+    
+
+
+
 
 
 .modal
