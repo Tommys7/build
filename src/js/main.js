@@ -1,21 +1,13 @@
-// var button = document.querySelector('#button');
-// var modal = document.querySelector('#modal');
-// var close = document.querySelector('#close');
-
-
-// button.addEventListener('click', function(){
-//     modal.classList.add('modal_active');
-// });
-
-// close.addEventListener('click', function(){
-//     modal.classList.remove('modal_active');
-// });
-
-
 $(document).ready(function(){
+    //napojeni wow.js
+    new WOW().init();
+    
     var button = $('#button');
     var modal = $('#modal');
     var close = $('#close')
+
+
+    
 
     button.on('click', function(){
         modal.addClass('modal_active');
@@ -25,6 +17,8 @@ $(document).ready(function(){
         modal.removeClass('modal_active');
     });
 
+
+    // slider slick
     $('.portfolio__slider').slick({
         slidesToShow : 3,
         prevArrow: $('.arrows__left'),
