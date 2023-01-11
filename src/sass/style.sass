@@ -94,6 +94,7 @@ input
         flex-basis: 50%
         @media (max-width: 1200px)
             margin-bottom: 30px
+            text-align: center
         &__title
             font-size: 41px
             font-weight: 400
@@ -117,23 +118,26 @@ input
                 font-size: 16
                 line-height: 1,4
     &-image
-        
         @media (max-width: 1200px)
             width: 100%
+            text-align: center
     &-image img
         @media (max-width: 680px)
-            width: 100%
+            width: 90%
 
             
     &-list
         margin: 40px 0 0 0
         padding: 0 0 0 0
+        
         @media (max-width: 640px)
             margin: 30px 0 0 0
         &__item
             display: flex
             align-items: center
             margin-bottom: 30px
+            @media (max-width: 1200px)
+                justify-content: center
             &:last-child
                 margin-bottom: 0
         &__image
@@ -160,9 +164,6 @@ input
     padding: 78px 0px
     background: url(../img/offer-bgc.jpg) no-repeat
     background-position: center right
-    
-
-    
     position: relative
     @media (max-width: 1070px)
         background-size: cover
@@ -245,6 +246,10 @@ input
     padding-bottom: 100px
     background: $grey url('../img/portfoliobg.png') left repeat-y
     background-size: 50%
+    @media (max-width:980px)
+        background: $grey
+
+
 
     &__header
         text-align: center
@@ -278,6 +283,9 @@ input
         margin-bottom: 60px
     &__card
         margin-bottom: 30px
+        max-width: 96%
+        img
+            max-width: 100%
 
 .cards
     display: flex
@@ -305,6 +313,8 @@ input
     &__image
         margin-bottom: 40px
         position: relative
+        img
+            display: block
         &::before
             content: ''
             position: absolute
@@ -343,6 +353,113 @@ input
         text-align: center
     
         
+
+
+.steps
+    margin-bottom: 97px
+    &__title
+        margin-bottom: 60px
+    &__subtitle
+        margin-bottom: 70px
+
+.icons
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    
+    
+.icon
+    position: relative
+    text-align: center
+    &:last-child
+        &::after
+            display: none
+    @media (max-width:980px)
+        width: 50%
+        margin-bottom: 30px
+    @media (max-width:650px)
+        width: 100%
+    &::after
+        content: ''
+        position: absolute
+        display: block
+        width: 72px
+        height: 25px
+        background-image: url('../img/arrow.png')
+        top: -10px
+        right: -60px
+        @media (max-width:1220px)
+            display: none
+        
+    &__image
+        width: 100px
+        height: 100px
+        margin: auto
+        border: 3px solid #ffd200
+        background-color: #ffffff
+        border-radius: 100px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 30px
+        
+             
+    &__subtitle
+        line-height: 20px
+        max-width: 188px
+        text-align: center
+        display: inline-block
+    
+
+.banner
+    height: 280px
+    background-color: #ffc000
+    margin-bottom: 100px
+    &__title
+        text-align: center
+        padding: 100px 0px
+        height: 80px
+        font-size: 32px
+        line-height: 50px
+        @media (max-width:980px)
+            font-size: 24px
+        @media (max-width:650px)
+            font-size: 18px
+            line-height: 30px
+        
+        
+
+.service
+    display: flex
+    justify-content: space-between
+    margin-bottom: 140px
+    &-box
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: 410px
+        background-color: $secondgrey
+        width: 370px
+        position: relative
+        &__image
+            position: absolute
+            left: 0
+            bottom: 0
+        &__text
+            margin: 27px 0px 0px 27px
+            font-size: 16px
+            line-height: 23px
+            font-weight: 400
+      
+            
+        
+
+
+    
+    
+        
+    
+                
 
 
 
