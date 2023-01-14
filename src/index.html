@@ -11,21 +11,20 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <script src="jquery-3.6.3.min.js"></script>
     <header class="header">
         <div class="container">
             <div class="header-block">
                 <div class="header__logo wow animate__animated animate__fadeInUp"data-wow-delay=".5s">
-                    <img src="img/logo.png" alt="">
+                    <img src="img/logo.png" alt="logo">
                 </div>
                 <div class="header__info">
                     <div class="header__contacts wow animate__animated animate__fadeInUp"data-wow-delay=".5s">
                         <span class="header__adress">Praha</span>
                         <a href="tel:+420777167699" class="header__phone">+420 777 167 699</a>
                     </div>
-                    <button class="button-style header__button wow animate__animated animate__fadeInUp"data-wow-delay=".5s" id="button">
-                        Zavolejte mi
-                    </button>
+                    <a href="tel:+420777167699">
+                        <button class="button-style header__button wow animate__animated animate__fadeInUp"data-wow-delay=".5s" id="button">Zavolejte si</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -60,7 +59,7 @@
                         </ul>
                     </div>
                     <div class="main-image">
-                        <img src="img/main-image.png" alt="Rozpolozeni webu">
+                        <img src="img/main-image.png" alt="Rozpolozeni bytu">
                     </div>
                 </div>
             </div>
@@ -344,7 +343,7 @@
                     <ul class="interview-list">
                         <li class="interview-list__item">
                             <span class="interview-list__counter">1.</span>
-                            <span class="interview-list__text">Jaká je plocha místnosti?</span>
+                            <span class="interview-list_ _text">Jaká je plocha místnosti?</span>
                         </li>
                         <li class="interview-list__item">
                             <span class="interview-list__counter">2.</span>
@@ -363,9 +362,9 @@
                 <div class="form brief__form">
                     <h3 class="form__title">Zanechte poptávku na bezplatný <br> výpočet renovace po telefonu </h3>
                     <span class="form__subtitle">Vyplňte níže uvedený formulář</span>
-                    <form action="#" class="form">
-                        <input type="text" class="input form__input" id="first-input" placeholder="Vaše jméno">
-                        <input type="text" class="input form__input" id="second-input"placeholder="Váš telefon">
+                    <form action="#" class="form" id="brief-form">
+                        <input type="text" name="username" class="input form__input" id="first-input" placeholder="Vaše jméno">
+                        <input type="number" name="telephone" class="input form__input" id="second-input"placeholder="Váš telefon">
                         <button class="button-style form__button">Vypočítat náklady</button>
                         <span class="form__desc"> Zavoláme vám nazpět do 60 sekund</span>
                     </form>
@@ -374,19 +373,47 @@
         </div>
     </section>
 
-
+    <footer class="footer">
+        <div class="map" id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.0580710246372!2d14.449655376880344!3d50.085199613594824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b949f25df712b%3A0xfeb8d30581d5761a!2zxaB0w610bsOpaG8gMjg1LzI5LCAxMzAgMDAgUHJhaGEgMy3FvWnFvmtvdg!5e0!3m2!1scs!2scz!4v1673644203582!5m2!1scs!2scz" width="100%" height="640" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <div class="container">
+            <div class="contacts-block">
+                <div class="contacts">
+                    <h3 class="contacts__title">Přijďte nás navštívit!! <br> Poradíme vám se všemi otázkami <br> ohledně oprav </h3>
+                    <ul class="contacts-list">
+                        <li class="contacts-list__item" >
+                            <div class="contacts-list__img">
+                                <img src="img/footer-icon1.png" alt="">
+                            </div>
+                            <span class="contacts-list__text">Praha <br> <strong>Štítného 285/29, <br> 130 00 Praha 3-Žižkov, Czechia</strong></span>
+                        </li>
+                        <li class="contacts-list__item" >
+                            <div class="contacts-list__img">
+                                <img src="img/footer-icon2.png" alt="">
+                            </div>
+                            <span class="contacts-list__text">Pracovní doba: <br> <strong>od 9:00 do 18:00</strong> </span>
+                        </li>
+                        <li class="contacts-list__item" >
+                            <div class="contacts-list__img">
+                                <img src="img/footer-icon3.png" alt="">
+                            </div>
+                            <span class="contacts-list__text">
+                                Telefon: <br>
+                                <a href="tel:+420777167699" class="contacts-list__tel"> <strong>+ 420 777 167 699</strong></a>
+                            </span>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     </main>
-    <div class="modal" id="modal">
-        <div class="modal-dialog">
-            <button class="modal-dialog__close" id="close">&times;</button>
-            <h4 class="modal-dialog__title">Modální okno</h4>
-        </div>
-        
-    </div>
+    
     <script src="jquery-3.6.3.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

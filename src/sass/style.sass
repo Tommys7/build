@@ -1,17 +1,20 @@
 @import "vars"
 @import "fonts"
 
+
 *
     box-sizing: border-box
 
+
 body
     +reg
-    display: none
+    
 
 .container
     max-width: 1170px
     width: 96%
     margin: auto
+
 
 .button-style
     background-color: $buttons
@@ -22,16 +25,19 @@ body
     &:hover
         background-color: darken($buttons, 5%)
 
+
 input
     border: 1px solid $border-input
     border-radius: 10px
     padding: 25px
+
 
 .section-title
     font-size: 30px
     +bold
     line-height: 45px
     text-align: center
+
 
 .section-subtitle
     color: #000
@@ -40,13 +46,13 @@ input
     display: block
     
 
-
-    
-
-
 .img
     max-width : 100%
 
+
+
+
+    
 .header
     padding: 20px 0px
     &-block
@@ -80,6 +86,7 @@ input
         +bold
         
             
+
         
         
 .main
@@ -90,12 +97,13 @@ input
         padding: 30px 0px
         @media (max-width: 1200px)
             flex-direction: column
-
     &-text
         flex-basis: 50%
         @media (max-width: 1200px)
             margin-bottom: 30px
-            text-align: center
+            margin-left: auto
+            margin-right: auto
+            
         &__title
             font-size: 41px
             font-weight: 400
@@ -108,37 +116,32 @@ input
             @media (max-width: 1200px)
                 padding-right: 10px
             @media (max-width: 640px)
-                font-size: 30
-                line-height: 1,4
+                font-size: 30px
+                line-height: 40px
         &__subtitle
             font-size: 20px
             font-weight: 400
             color: $accent
             +bold
             @media (max-width: 640px)
-                font-size: 16
+                font-size: 16px
                 line-height: 1,4
     &-image
+        padding-top: 35px
         @media (max-width: 1200px)
-            width: 100%
             text-align: center
     &-image img
-        @media (max-width: 680px)
-            width: 90%
-
-            
+        max-width: 570px
+        max-height: 488px
+        @media (max-width: 1200px)
+            width: 100%
     &-list
         margin: 40px 0 0 0
         padding: 0 0 0 0
-        
-        @media (max-width: 640px)
-            margin: 30px 0 0 0
         &__item
             display: flex
             align-items: center
             margin-bottom: 30px
-            @media (max-width: 1200px)
-                justify-content: center
             &:last-child
                 margin-bottom: 0
         &__image
@@ -178,13 +181,11 @@ input
         background-color: #fff
         top: 0
         left: 0
-    
     &-block
         width: 50%
         position: relative
         @media (max-width: 768px)
             width: 100%
-        
     &-title
         max-width: 350px
         +bold
@@ -249,9 +250,6 @@ input
     background-size: 50%
     @media (max-width:980px)
         background: $grey
-
-
-
     &__header
         text-align: center
         margin-bottom: 100px
@@ -268,7 +266,6 @@ input
     &__image
         margin: auto
         
-
 .arrows__left, .arrows__right
     cursor: pointer
 
@@ -304,8 +301,6 @@ input
 .card
     border: 1px solid #e8e8e8
     transition: .3s
-    
-    
     &:hover
         box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1)
         .card__image::before
@@ -332,6 +327,8 @@ input
         text-decoration: none
         display: inline-block
         color: $accent
+        &:hover
+            cursor: pointer
         +bold
         margin-bottom: 45px
         position: relative
@@ -349,7 +346,6 @@ input
             width: 100%
             height: 3px
             transition: .3s
-
     &__text
         text-align: center
     
@@ -446,7 +442,7 @@ input
         height: 410px
         background-color: $secondgrey
         width: 370px
-        position: relative // tohle je dulezitejsi nez image
+        position: relative 
         &__image
             width: 100%
             position: absolute
@@ -461,6 +457,8 @@ input
         
 .contract
     padding-bottom: 230px
+    @media (max-width: 885px)
+        padding-bottom: 100px
     &-title
         margin-bottom: 100px
     &-box
@@ -491,17 +489,33 @@ input
     background-position: left center, center right
     background-size: 50%, cover
     background-repeat: repeat-y, no-repeat
-    display: none
+    padding-bottom: 110px
+    
+    @media (max-width: 780px)
+        background-image: url('../img/brief-color-bg.png'), url('../img/brief-bg.jpg')
+        background-position: top center, bottom right
+        background-size: 100% 50%, cover
+        background-repeat: repeat-x, no-repeat
+        
     &-block
         display: flex
+        @media (max-width: 780px)
+            flex-direction: column
     &__interview
         margin-top: 110px
         flex-basis: 50%
+        margin-right: 15px
     &__form
         flex-basis: 50%
         margin-top: 110px
         padding-left: 200px
         text-align: center
+        @media (max-width: 1250px)
+            padding: 0px
+            display: flex
+            flex-direction: column
+            position: relative
+            right: -1%
     
     
 .form
@@ -509,18 +523,23 @@ input
         +bold
         font-size: 22px
         line-height: 23px
-        margin-bottom: 50px
+        margin-bottom: 52px
     &__subtitle
         font-size: 16px
-        margin-bottom: 50px
+        margin-bottom: 49px
         display: block
     &__input
-        width: 370px
+        max-width: 370px
+        width: 100%
         height: 65px
     &__button
-        width: 368px
+        max-width: 368px
+        width: 100%
         height: 70px
         margin-bottom: 33px
+        text-align: center right
+    &__desc
+        display: block
 
         
 #first-input
@@ -530,24 +549,29 @@ input
 
 
 .interview
-    
+    margin: auto
     &__title
         +bold
         font-size: 22px
         line-height: 23px
         margin-bottom: 50px
+        @media (max-width: 979px)
+            max-width: 100%
     &__subtitle
         font-size: 16px
-        margin-bottom: 100px
+        margin-bottom: 70px
         display: block
     &-list
         list-style-type: none
         padding: 0
+        
         &__item
             display: flex
             align-items: center
             margin-bottom: 25px
             +bold
+            @media (max-width: 780px)
+                
         &__counter
             min-width: 35px
             height: 35px
@@ -559,38 +583,58 @@ input
             margin-right: 30px
             font-size: 14px
  
+.footer
+    position: relative
     
     
-        
-    
-                
-
-
-
-.modal
-    position: fixed
+.map
+    width: 50%
+    position: absolute
     left: 0
     top: 0
-    width: 100%
-    height: 100%
-    background-color: rgba(#000, .5)
-    display: none
-    &_active
-        display: flex
-    &-dialog
-        margin: auto
-        max-width: 450px
-        width: 90%
-        min-height: 200px
-        background-color: white
-        padding: 40px
+    @media (max-width: 750px)
         position: relative
-        &__close
-            position: absolute
-            right: 0
-            top: 0
-            
-            
+        width: 100%
+
+.contacts
+    flex-basis: 50%
+    padding-top: 100px
+    padding-left: 200px
+    @media (max-width: 1150px)
+        padding-left: 12%
+    @media (max-width: 800px)
+        padding-left: 8%
+    &-block
+        display: flex
+        justify-content: flex-end
+        @media (max-width: 750px)
+            display: block
+    &__title
+        margin-bottom: 100px
+    &-list
+        padding: 0
+        &__item
+            display: flex
+            margin-bottom: 40px
+        &__img
+            margin-right: 20px
+        &__text
+            line-height: 26px
+            strong
+                +bold
+        &__tel
+            text-decoration: none
+            color: #000
+            &:hover
+                text-decoration: underline
+           
+        
+
+
+        
+
+        
+    
 
         
     

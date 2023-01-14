@@ -9,12 +9,19 @@ $(document).ready(function(){
 
     
 
-    button.on('click', function(){
-        modal.addClass('modal_active');
-    });
 
-    close.on('click', function(){
-        modal.removeClass('modal_active');
+
+    //validace formulare
+
+    $('#brief-form').validate({
+      rules: {
+        username: "required",
+        telephone: "required"
+      },
+      messages: {
+        username: "Vyplňte prosím vaše jméno",
+        telephone: "Vyplňte prosím vaše tel. číslo"
+      }
     });
 
 
